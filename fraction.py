@@ -3,11 +3,10 @@ from help_func import *
 class Fraction:
     def __init__(self, numerator: str, denominator: str):
         if (not is_digits(numerator)) or (not is_digits(denominator)):
-            print(numerator)
-            raise TypeError
+            raise TypeError("Введите в полях числителей и знаменатилей целые числа!")
 
         if denominator == "0":
-            raise ZeroDivisionError
+            raise ZeroDivisionError("На ноль делить нельзя!")
 
         self.numerator = int(numerator)
         self.denominator = int(denominator)
