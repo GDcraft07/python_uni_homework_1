@@ -25,7 +25,7 @@ def calculations(fraction_1: Fraction, fraction_2: Fraction, sign: str):
 
 def main():
     root = Tk()
-    root.title("Калькулятор дробей.")
+    root.title("Калькулятор дробей")
     root.geometry("400x300")
 
     for c in range(3): root.columnconfigure(index=c, weight=1)
@@ -53,13 +53,10 @@ def main():
     radio_multi = Radiobutton(frame_radiobutton, text="*", variable=sign, value="*")
     radio_div = Radiobutton(frame_radiobutton, text="/", variable=sign, value="/")
 
-    radio_sum.grid(row=0, column=0, padx=0, pady=0)
-    radio_sub.grid(row=1, column=0, padx=0, pady=0)
-    radio_multi.grid(row=0, column=1, padx=0, pady=0)
-    radio_div.grid(row=1, column=1, padx=0, pady=0)
-
-    button_submit = Button(root, text="SUBMIT")
-    button_submit.grid(row=2, column=0, columnspan=3, ipadx=70, ipady=7, padx=1, pady=1)
+    radio_sum.grid(row=0, column=0)
+    radio_sub.grid(row=1, column=0)
+    radio_multi.grid(row=0, column=1)
+    radio_div.grid(row=1, column=1)
 
 
     def doCalculations():
